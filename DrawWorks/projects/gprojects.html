@@ -1,0 +1,18 @@
+
+    <p>All Projects</p>
+    
+    <ul>
+        <li ng-repeat="project in projects | orderBy: username">
+            <a ng-href="#/project/{{project.$id}}">
+                <span>{{ project.title }}</span>
+                <span>(by {{ project.username }})</span>
+            </a>
+        </li>
+    </ul>
+    
+    <form name="newProjectForm">
+        <input type="text" ng-model="title" placeholder="New project title..." required/>
+        <button ng-disabled="User.reg_contractorId != 1" ng-click="createProjects(username, title)">Add A New Project</button>
+    </form>
+
+</div>

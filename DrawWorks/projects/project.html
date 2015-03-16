@@ -1,0 +1,12 @@
+<div>
+    <h1>Recent Posts by {{ username }}</h1>
+
+    <form name="newCommentForm">
+        <input type="text" ng-model="newCommentText" placeholder="Write a comment..." required/>
+        <button ng-disabled="newCommentForm.$invalid" ng-click="createComment(newCommentText)">Post New Bid</button>
+    </form>
+
+    <ul>
+        <li ng-repeat="comment in comments">{{ comment.username }}: {{ comment.text }}</li>
+    </ul>
+</div>

@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html ng-app="drawWorksApp">
 <head>
-<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles.css">
 
 </head>
 <body ng-controller="mainController">
+ 
+          <div class="heading"><a href="/landing"> Home </a></div>
+          <div class="heading"><a href="/#/login"> Log in</a></div>
+          <div class="heading"><a href="/#/aboutMe"> About Me</a></div>
+          <div class="heading"><a href="/#/gprojects"> Projects </a></div>
+          <!--<div class="heading"><a href="/#/project/:projectId">General Contractor Page</a></div>
+          <div class="heading"><a href="/#/project/:projectId">Sub-Contractor Page</a></div> -->
     
 <!-- Add your site or application content here -->
     <div class="container" ng-view></div>
@@ -16,14 +23,18 @@
 <script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script>
 
 <!-- AngularFire -->
-<script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
-<script src="js/app.js"></script>
-<script type="text/javascript" src="js/mainController.js"></script>
-<!-- <script type="text/javascript" src="rtfmService.js"></script> -->
-<script type="text/javascript" src="js/fService.js"></script>
-<script src="login/loginCtrl.js"></script>
-<!-- <script type="text/javascript" src="threads/threadsCtrl.js"></script>
-<script type="text/javascript" src="threads/threadService.js"></script>
-<script type="text/javascript" src="threads/threadCtrl.js"></script> -->
+<script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+
+<script src="app.js"></script>
+<script type="text/javascript" src="mainController.js"></script>
+<script type="text/javascript" src="drawWorksService.js"></script>
+<script type="text/javascript" src="envService.js"></script>
+<script src="login/loginController.js"></script>
+<script type="text/javascript" src="projects/gprojectsCtrl.js"></script>
+<script type="text/javascript" src="projects/projectservice.js"></script>
+<script type="text/javascript" src="projects/gprojectservice.js"></script>    
+<script type="text/javascript" src="projects/projectCtrl.js"></script>
+<script src="login/conRegController.js"></script>
+<script src="aboutmeCtrl.js" ></script>
 </body>
 </html>
