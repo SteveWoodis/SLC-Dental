@@ -23,8 +23,17 @@ app.config(function($routeProvider){
         }
     })
     .when('/createProjects', {
-     templateUrl: '/projects/gcbids.html',
-        controller: 'gcbidsCtrl',
+     templateUrl: '/projects/createbids.html',
+        controller: 'createbidsCtrl',
+        resolve: {
+            projectsRef: function (projectService) {
+            return projectService.getProjects();
+            }
+        }
+    })
+    .when('/submitProjects', {
+     templateUrl: '/projects/submitbids.html',
+        controller: 'submitbidsCtrl',
         resolve: {
             projectsRef: function (projectService) {
             return projectService.getProjects();
